@@ -113,21 +113,51 @@ def move_to_692_518():
     xb = 692 - x
     yb = 518 - y
     frame = 0
-    bottom = 0
-    while x > 316 and y < 225:
+    bottom = 100
+    while x < 692 and y < 518:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, bottom, 100, 100, x, y)
+        frame = (frame + 1) % 8
+        update_canvas()
+        x += 2
+        y += yb / (xb / 2)
+        delay(0.01)
+        print(x, y)
+def move_to_682_336():
+    x = 692
+    y = 518
+    xb = x - 682
+    yb = y - 336
+    frame = 0
+    bottom = 100
+    while x > 316 and y > 225:
         clear_canvas()
         grass.draw(400, 30)
         character.clip_draw(frame * 100, bottom, 100, 100, x, y)
         frame = (frame + 1) % 8
         update_canvas()
         x -= 2
+        y -= yb / (xb / 2)
+        delay(0.01)
+        print(x, y)
+def move_to_712_349():
+    x = 682
+    y = 336
+    xb = 712 - x
+    yb = 349 - y
+    frame = 0
+    bottom = 100
+    while x < 712 and y < 349:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, bottom, 100, 100, x, y)
+        frame = (frame + 1) % 8
+        update_canvas()
+        x += 2
         y += yb / (xb / 2)
         delay(0.01)
         print(x, y)
-def move_to_682_336():
-    pass
-def move_to_712_349():
-    pass
 
 def move_to_cordinate():
     move_to_132_243()
@@ -137,8 +167,8 @@ def move_to_cordinate():
     move_to_316_225()
     move_to_510_92()
     move_to_692_518()
-    #move_to_682_336()
-    #move_to_712_349()
+    move_to_682_336()
+    move_to_712_349()
 while True:
     move_to_cordinate()
 
