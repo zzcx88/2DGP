@@ -35,7 +35,19 @@ def move_to_435_470():
         y += 2
         delay(0.05)
 def move_to_477_203():
-    pass
+    x = 435
+    y = 470
+    frame = 0
+    bottom = 100
+    while x < 477 and y > 203:
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 100, bottom, 100, 100, x, y)
+        frame = (frame + 1) % 8
+        update_canvas()
+        x += 2
+        y -= 2
+        delay(0.05)
 def move_to_715_136():
     pass
 def move_to_316_225():
@@ -51,8 +63,8 @@ def move_to_712_349():
 
 def move_to_cordinate():
     #move_to_132_243()
-    move_to_435_470()
-    #move_to_477_203()
+    #move_to_435_470()
+    move_to_477_203()
     #move_to_715_136()
     #move_to_316_225()
     #move_to_510_92()
