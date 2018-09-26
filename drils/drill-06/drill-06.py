@@ -41,8 +41,8 @@ hide_cursor()
 ## hide_cursor()
 #character.clip_draw(frame * 100, 100 * 1, 100, 100, KPU_WIDTH / 2 , KPU_HEIGHT / 2)
 while running:
-    while ifClick == True:
-        while x != cx and y != cy:
+    #while ifClick == True:
+        #while x != cx and y != cy:
             if x - cx < 0 and y - cy < 0:
                 cx -= 5
                 cy -= y / (x / 5)
@@ -67,7 +67,7 @@ while running:
             update_canvas()
             delay(0.02)
             handle_events()
-    ifClick = False
+    #ifClick = False
 
 close_canvas()
 
