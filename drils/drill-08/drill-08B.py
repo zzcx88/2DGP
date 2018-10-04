@@ -16,7 +16,7 @@ while True:
     i = 0
     x, y = points[n - 1]
     tx, ty = points[n]
-    while tx != x and y != ty:
+    while tx != x and y != ty: 
         clear_canvas()
         print((x, y), (tx, ty))
         t = i / 100
