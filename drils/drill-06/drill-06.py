@@ -67,6 +67,7 @@ while running:
             update_canvas()
             delay(0.02)
             handle_events()
+
     #ifClick = False
 
 close_canvas()
