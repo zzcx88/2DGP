@@ -38,9 +38,6 @@ def draw():
 
 
 
-
-
-
 def update():
     pass
 
